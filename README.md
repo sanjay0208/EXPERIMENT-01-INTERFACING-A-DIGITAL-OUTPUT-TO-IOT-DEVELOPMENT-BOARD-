@@ -1,8 +1,7 @@
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  DATE: 13/02/2024
+###  NAME: sanjay m
+###  ROLL NO : 212222110038
+###  DEPARTMENT: cse(iot)
 
 
 
@@ -86,11 +85,33 @@ The main features of LPC2148 include the following.
 
 
 ## STM 32 CUBE PROGRAM :
+~~~#include "main.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+  
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(3000);
+  }
+~~~
 
 
 
 ## Output  :
+ ![WhatsApp Image 2024-02-22 at 14 11 24](https://github.com/sanjay0208/EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/119406959/9d3ae55a-f9fa-4e5e-8a27-aedbec87b0f6)
  
+ ![WhatsApp Image 2024-02-22 at 14 11 26](https://github.com/sanjay0208/EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/119406959/9822b395-4f4a-4290-9ac9-31424746caf5)
+
+
  
  
  
